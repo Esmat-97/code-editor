@@ -1,2 +1,2 @@
-# code editor Electron
+# code editor with Electron
  
