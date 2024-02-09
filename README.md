@@ -1,6 +1,4 @@
 # code editor 
-# calender 
-# online Clinic 
 
 Welcome to my Code editor! This project does amazing things and you'll love it.
 
