@@ -1,0 +1,54 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>online editor</title>
+   <style>
+   
+main{
+    display: flex;
+}
+    #a{
+        display: block;
+       
+    }
+    textarea{
+        background-color: black;
+        color: white;
+        width: 500;
+        height: 200;
+        font-size: 25;
+    }
+    iframe{
+         width: 700;
+        height: 400;
+    }
+   </style>
+</head>
+<body>
+    <main>
+<section id="a">
+    <textarea  cols="30" rows="20" id="html" placeholder="html" onkeyup="run()"></textarea>
+    <textarea  cols="30" rows="20" id="css"  placeholder="css" onkeyup="run()"></textarea>
+    <textarea  cols="30" rows="20" id="js"   placeholder="js"  onkeyup="run()"></textarea>
+</section>
+<section>
+    <iframe   id="output"></iframe>
+</section>
+</main>
+    <script>
+
+        function run (){
+
+        
+let htmlcode=document.getElementById('html').value;
+let csscode=document.getElementById('css').value;
+let jscode=document.getElementById('js').value;
+let output=document.getElementById('output');
+
+output.contentDocument.body.innerHTML=htmlcode +'<style>'+ csscode +'</style>' ;
+output.contentWindow.eval(jscode);
+        }
+    </script>
+</body>
+</html>
