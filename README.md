@@ -18,6 +18,4 @@ Here's how you can use this project:
 ```bash
 $ npm install --save-dev electron  
 $ npm start
-
-
  
